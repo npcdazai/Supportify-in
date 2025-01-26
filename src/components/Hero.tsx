@@ -45,8 +45,9 @@ export const Hero = () => {
         </div>
         <div className="flex justify-center">
           <p className="text-center text-xl mt-8 max-w-md">
-            Celebrate the joy of accomplishment with an app designed to track
-            your progress, motivate your efforts, and celebrate your successes.
+            Our expert, committed team put our shared beliefs into action –
+            every day. Together, we combine innovation and collective knowledge
+            to create the extraordinary
           </p>
         </div>
         <div className="flex justify-center mt-8 ">

@@ -19,13 +19,13 @@ export const Navbar = () => {
               href="#"
               className="text-opacity-60 text-white hover:text-opacity-100 transition "
             >
-              About
+              Who are we
             </a>
             <a
               href="#"
               className="text-opacity-60 text-white hover:text-opacity-100 transition "
             >
-              Features
+              Services
             </a>
             <a
               href="#"
