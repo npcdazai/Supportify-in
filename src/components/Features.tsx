@@ -1,20 +1,20 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, ReactNode } from "react";
 import VanillaTilt from "vanilla-tilt";
+import Image from "next/image";
 import mobApp from "../assets/images/mobApp.jpg";
 import website from "../assets/images/website.jpg";
 import custom from "../assets/images/customWebsite.jpg";
 import consulting from "../assets/images/consulting.jpg";
-import Image from "next/image";
 
-const features = [
-  {
-    title: "Mobile App Development",
-    description:
-      "Win the hearts of your audience with gorgeous, captivating, and high-performance mobile apps. More importantly, win more customers!",
-    img: mobApp,
-  },
+interface Feature {
+  title: string;
+  description: string;
+  img?: any;
+}
+
+const features: Feature[] = [
   {
     title: "Website Development",
     description:
@@ -40,8 +40,12 @@ const features = [
   },
 ];
 
-const TiltCard = ({ children }) => {
-  const tiltRef = useRef(null);
+interface TiltCardProps {
+  children: ReactNode;
+}
+
+const TiltCard: React.FC<TiltCardProps> = ({ children }) => {
+  const tiltRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     if (tiltRef.current) {
@@ -64,7 +68,7 @@ const TiltCard = ({ children }) => {
   );
 };
 
-export const Features = () => {
+export const Features: React.FC = () => {
   return (
     <div className="bg-black text-white py-16 sm:py-24">
       <div className="container mx-auto px-4 lg:px-8">
