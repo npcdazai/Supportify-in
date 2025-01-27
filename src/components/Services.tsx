@@ -89,7 +89,7 @@ const ServiceSection: React.FC = () => {
                 />
               )}
 
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-[linear-gradient(to_right,#F87AFF,#FB93D0,#FFDD99,#C3F0B2,#2FD8FE)] after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
             </div>
           ))}
           <div className="flex flex-col bg-gray-900 w-1/3 h-[290px] justify-between relative group overflow-hidden">
@@ -109,7 +109,7 @@ const ServiceSection: React.FC = () => {
               </h3>
               <p className="text-gray-400">{servicesData[1].description}</p>
             </div>
-            <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
+            <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-[linear-gradient(to_right,#F87AFF,#FB93D0,#FFDD99,#C3F0B2,#2FD8FE)] after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
           </div>
         </div>
         <div className="flex justify-between items-center gap-4 w-full">
@@ -132,7 +132,7 @@ const ServiceSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
+              <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-[linear-gradient(to_right,#F87AFF,#FB93D0,#FFDD99,#C3F0B2,#2FD8FE)] after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
             </div>
           ))}
         </div>
