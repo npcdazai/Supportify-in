@@ -7,7 +7,7 @@ import { ProductShowcase } from "@/components/ProductShowcase";
 import { FAQs } from "@/components/FAQs";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
-
+import ServiceSection from "@/components/Services";
 export default function Home() {
   return (
     <>
@@ -15,7 +15,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       {/* <LogoTicker /> */}
-      <Features />
+      {/* <Features /> */}
+      <ServiceSection/>
       <ProductShowcase />
       <FAQs />
       <CallToAction />
