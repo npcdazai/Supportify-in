@@ -65,7 +65,7 @@ const ServiceSection: React.FC = () => {
           {servicesData.slice(0, 1).map((service) => (
             <div
               key={service.id}
-              className={`group flex w-2/3 justify-between items-center bg-black gap-5  relative border py-1 px-2 rounded-lg border-white/30 overflow-hidden ${commonStyles}`}
+              className={`group flex w-2/3 justify-between items-center bg-black gap-5 h-[250px] relative border py-1 px-2 rounded-lg border-white/30 overflow-hidden ${commonStyles}`}
             >
               <div className="w-1/2 flex flex-col h-[283px] p-8 gap-2">
                 <h3 className="text-white font-semibold text-lg">
@@ -92,7 +92,7 @@ const ServiceSection: React.FC = () => {
               <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-[linear-gradient(to_right,#F87AFF,#FB93D0,#FFDD99,#C3F0B2,#2FD8FE)] after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
             </div>
           ))}
-          <div className="flex flex-col border py-1 px-2 rounded-lg border-white/30 bg-black w-1/3 h-[290px] justify-between relative group overflow-hidden">
+          <div className="flex flex-col border py-1 px-2 rounded-lg border-white/30 bg-black w-1/3 h-[250px] justify-between relative group overflow-hidden">
             <div className="p-8">
               <Image
                 src={servicesData[1].image || ""}
@@ -116,7 +116,7 @@ const ServiceSection: React.FC = () => {
           {servicesData.slice(2).map((service) => (
             <div
               key={service.id}
-              className={`group flex flex-col bg-black w-2/5 h-[270px] border py-1 px-2 border-white/30 justify-between items-start rounded-lg relative overflow-hidden ${commonStyles}`}
+              className={`group flex flex-col bg-black w-2/5 h-[250px] border py-1 px-2 border-white/30 justify-between items-start rounded-lg relative overflow-hidden ${commonStyles}`}
             >
               <div className="p-8">
                 {service.image && (
