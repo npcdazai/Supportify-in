@@ -1,24 +1,27 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-// import img from "../assets/banner.png";
-// import uparrow from "../assets/uparrow.png";
-// import service from "../assets/service.png";
-// import CustomButton from "/";
-import { commonStyles } from "../styles/commonStyles";
-import mobile from "../assets/icons/website.png";
+import React from "react";
+import aiml from "../assets/icons/aiml.png";
 import hybrid from "../assets/icons/hybrid.png";
-import mob from "../assets/icons/mob.png"
-import ios from "../assets/icons/ios.png"
-import aiml from "../assets/icons/aiml.png"
+import ios from "../assets/icons/ios.png";
+import mob from "../assets/icons/mob.png";
+import { commonStyles } from "../styles/commonStyles";
 
-const servicesData = [
+interface Service {
+  id: number;
+  title: string;
+  description: string;
+  image?: string;
+  buttonText?: string;
+  buttonLink?: string;
+}
+
+const servicesData: Service[] = [
   {
     id: 1,
     title: "Mobile App Development",
     description:
       "Transforming concepts into captivating mobile experiences with our expert app development services.",
-    // image: img,
     buttonText: "Let’s build an App",
     buttonLink: "/mobile-app",
   },
@@ -27,28 +30,27 @@ const servicesData = [
     title: "Hybrid App Development",
     description:
       "Building versatile apps that work across platforms to ensure a seamless user experience.",
-    image: hybrid,
+    image: hybrid.src,
   },
   {
     id: 3,
     title: "iOS App Development",
-    description:
-      "Creating high-quality iOS applications tailored to your needs.",
-    image: ios,
+    description: "Creating high-quality iOS applications tailored to your needs.",
+    image: ios.src,
   },
   {
     id: 4,
     title: "Android App Development",
     description:
       "Developing responsive Android applications to reach a wider audience.",
-    image: mob,
+    image: mob.src,
   },
   {
     id: 5,
     title: "AI/ML Applications",
     description:
       "Leveraging AI and ML to build intelligent and predictive mobile applications.",
-    image: aiml,
+    image: aiml.src,
   },
 ];
 
@@ -70,18 +72,22 @@ const ServiceSection: React.FC = () => {
                   {service.title}
                 </h3>
                 <p className="text-gray-400">{service.description}</p>
-                {service.buttonText && (
+                {service.buttonText && service.buttonLink && (
                   <Link href={service.buttonLink}>
-                    {/* <CustomButton Context={service.buttonText} /> */}
+                    <button className="text-blue-500 underline">
+                      {service.buttonText}
+                    </button>
                   </Link>
                 )}
               </div>
-              <Image
-                src={service.image}
-                alt={service.title}
-                width={348}
-                height={261}
-              />
+              {service.image && (
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  width={348}
+                  height={261}
+                />
+              )}
 
               <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
             </div>
@@ -89,7 +95,7 @@ const ServiceSection: React.FC = () => {
           <div className="flex flex-col bg-gray-900 w-1/3 h-[290px] justify-between relative group overflow-hidden">
             <div className="p-8">
               <Image
-                src={servicesData[1].image}
+                src={servicesData[1].image || ""}
                 alt="Service Icon"
                 width={48}
                 height={38}
@@ -113,7 +119,9 @@ const ServiceSection: React.FC = () => {
               className={`group flex flex-col bg-gray-900 w-2/5 h-[270px] justify-between items-start rounded-lg relative overflow-hidden ${commonStyles}`}
             >
               <div className="p-8">
-                <Image src={service.image} alt="Service Icon" width={48} height={38} />
+                {service.image && (
+                  <Image src={service.image} alt="Service Icon" width={48} height={38} />
+                )}
               </div>
               <div className="w-full flex flex-col h-full px-8 gap-6">
                 <h3 className="text-white font-semibold text-lg leading-[25px]">
@@ -124,7 +132,6 @@ const ServiceSection: React.FC = () => {
                 </p>
               </div>
 
-              {/* Hover effect with ::after */}
               <div className="absolute bottom-0 left-0 w-full h-1 bg-transparent after:content-[''] after:absolute after:w-full after:h-1 after:bg-white after:scale-x-0 after:origin-left after:transition-transform after:duration-1000 group-hover:after:scale-x-100" />
             </div>
           ))}
