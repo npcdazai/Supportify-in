@@ -8,6 +8,7 @@ import { FAQs } from "@/components/FAQs";
 import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import ServiceSection from "@/components/Services";
+import { Pricing } from "@/components/Pricing";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
       {/* <LogoTicker /> */}
       {/* <Features /> */}
       <ServiceSection/>
+      <Pricing/>
       <ProductShowcase />
       <FAQs />
       <CallToAction />
