@@ -7,6 +7,7 @@ const pricingTiers = [
   {
     title: "Budget Friendly",
     monthlyPrice: 0,
+    des: "Our Business Analysis Team Can Help You Document Your Project and Give You a Resonable Price Quote",
     buttonText: "Get started for free",
     popular: false,
     inverse: false,
@@ -21,6 +22,7 @@ const pricingTiers = [
   {
     title: "Dedicated Team",
     monthlyPrice: 9,
+    des: "A Dedicated Resource Where You Can Implement the Agile Scrum Development Methodology and Review the Progress.",
     buttonText: "Sign up now",
     popular: true,
     inverse: true,
@@ -38,6 +40,7 @@ const pricingTiers = [
     title: "Time And Material",
     monthlyPrice: 19,
     buttonText: "Sign up now",
+    des: "Our Project Managers Will Advise on the Importance, Level of Complexity and Way of Implementation.",
     popular: false,
     inverse: false,
     features: [
@@ -75,6 +78,7 @@ export const Pricing = () => {
               popular,
               inverse,
               features,
+              des,
             }) => (
               <div
                 key={monthlyPrice}
@@ -86,8 +90,8 @@ export const Pricing = () => {
                 <div className="flex  justify-between ">
                   <h3
                     className={twMerge(
-                      "text-lg font-bold text-white/50 ",
-                      inverse === true && "text-white/60"
+                      "text-lg font-bold text-white",
+                      inverse === true && "text-white"
                     )}
                   >
                     {title}
@@ -112,11 +116,11 @@ export const Pricing = () => {
                   )}
                 </div>
                 <div className="flex items-baseline gap-1 mt-[30px]">
-                  <span className="text-4xl font-bold tracking-tighter leading-none">
+                  {/* <span className="text-4xl font-bold tracking-tighter leading-none">
                     ${monthlyPrice}
-                  </span>
+                  </span> */}
                   <span className="tracking-tight font-bold text-white/50">
-                    /month
+                    {des}
                   </span>
                 </div>
                 <div className="relative flex items-center mt-4 justify-center">
