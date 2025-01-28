@@ -35,7 +35,8 @@ const servicesData: Service[] = [
   {
     id: 3,
     title: "iOS App Development",
-    description: "Creating high-quality iOS applications tailored to your needs.",
+    description:
+      "Creating high-quality iOS applications tailored to your needs.",
     image: ios.src,
   },
   {
@@ -67,16 +68,33 @@ const ServiceSection: React.FC = () => {
               key={service.id}
               className={`group flex w-2/3 justify-between items-center bg-black gap-5 h-[250px] relative border py-1 px-2 rounded-lg border-white/30 overflow-hidden ${commonStyles}`}
             >
-              <div className="w-1/2 flex flex-col h-[283px] p-8 gap-2">
-                <h3 className="text-white font-semibold text-lg">
-                  {service.title}
-                </h3>
-                <p className="text-gray-400">{service.description}</p>
+              <div className="w-1/2 flex flex-col justify-between h-[283px] p-8 gap-2">
+                <div>
+                  <h3 className="text-white font-semibold text-lg">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-400">{service.description}</p>
+                </div>
                 {service.buttonText && service.buttonLink && (
                   <Link href={service.buttonLink}>
-                    <button className="text-blue-500 underline">
-                      {service.buttonText}
-                    </button>
+                    <div className="relative w-[200px] mb-4 ">
+                      <div className="absolute inset-0 bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FF)] blur-md"></div>
+
+                      <div className="relative flex items-center justify-center">
+                        <div
+                          className="absolute inset-0 blur-xl opacity-80 animate-pulse"
+                          style={{
+                            background:
+                              "radial-gradient(circle, rgba(248,123,255,0.8) 0%, rgba(47,216,255,0.4) 100%)",
+                          }}
+                        ></div>
+
+                        {/* Glassmorphic Button */}
+                        <button className="relative px-6 py-3 font-semibold text-white rounded-lg bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+                          {service.buttonText}
+                        </button>
+                      </div>
+                    </div>
                   </Link>
                 )}
               </div>
@@ -120,7 +138,12 @@ const ServiceSection: React.FC = () => {
             >
               <div className="p-8">
                 {service.image && (
-                  <Image src={service.image} alt="Service Icon" width={48} height={38} />
+                  <Image
+                    src={service.image}
+                    alt="Service Icon"
+                    width={48}
+                    height={38}
+                  />
                 )}
               </div>
               <div className="w-full flex flex-col h-full px-8 gap-6">
