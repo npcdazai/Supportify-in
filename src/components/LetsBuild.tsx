@@ -50,7 +50,7 @@ export const LetsBuild: React.FC = () => {
 
                 {/* Glassmorphic Button */}
                 <button className="relative px-6 py-3 font-semibold text-white rounded-lg bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
-                  Let's Connect
+                Let&apos;s Connect
                 </button>
               </div>
             </div>
