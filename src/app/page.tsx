@@ -9,6 +9,7 @@ import { CallToAction } from "@/components/CallToAction";
 import { Footer } from "@/components/Footer";
 import ServiceSection from "@/components/Services";
 import { Pricing } from "@/components/Pricing";
+import { LetsBuild } from "@/components/LetsBuild";
 export default function Home() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function Home() {
       {/* <Features /> */}
       <ServiceSection/>
       <Pricing/>
+      <LetsBuild/>
       <ProductShowcase />
       <FAQs />
       <CallToAction />
