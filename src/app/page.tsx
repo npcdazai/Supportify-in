@@ -10,6 +10,7 @@ import { Footer } from "@/components/Footer";
 import ServiceSection from "@/components/Services";
 import { Pricing } from "@/components/Pricing";
 import { LetsBuild } from "@/components/LetsBuild";
+import TabsNii from "@/components/TabsNii"
 export default function Home() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function Home() {
       <ServiceSection/>
       <Pricing/>
       <LetsBuild/>
+      <TabsNii/>
       <ProductShowcase />
       <FAQs />
       <CallToAction />
