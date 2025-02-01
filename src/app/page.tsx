@@ -22,7 +22,7 @@ export default function Home() {
       <ServiceSection/>
       <Pricing/>
       <LetsBuild/>
-      <TabsNii/>
+      {/* <TabsNii/> */}
       <ProductShowcase />
       <FAQs />
       <CallToAction />

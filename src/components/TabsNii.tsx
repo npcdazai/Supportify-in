@@ -5,7 +5,7 @@ import duun from "@/assets/images/apex.png";
 
 const AppleCardsCarouselDemo = async () => {
   const cards = data.map((card, index) => (
-    <Card key={card.src} card={card} index={index} />
+    <Card key={null} card={card} index={index} />
   ));
 
   return (
